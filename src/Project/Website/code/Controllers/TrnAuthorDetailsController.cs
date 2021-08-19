@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sitecore;
 using Sitecore.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Sitecore.Project.Website.Controllers
 {
@@ -18,9 +19,9 @@ namespace Sitecore.Project.Website.Controllers
 
             //Create model instance + set field values
             AuthorDetails adetails = new AuthorDetails();
-            adetails.AuthorName = contextItem.Fields["AuthorName"].Value;
-            adetails.AuthorDesignation = contextItem.Fields["AuthorDesignation"].Value;
-            adetails.AuthorImage = contextItem.Fields["AuthorImage"].Value;
+            adetails.AuthorName = new HtmlString(FieldRenderer.Render(contextItem,"AuthorName"));
+            adetails.AuthorDesignation = new HtmlString(FieldRenderer.Render(contextItem,"AuthorDesignation"));
+            adetails.AuthorImage = new HtmlString(FieldRenderer.Render(contextItem,"AuthorImage"));
 
             //return model instance to view
             return View(adetails);

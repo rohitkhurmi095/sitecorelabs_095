@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sitecore;
 using Sitecore.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Sitecore.Project.Website.Controllers
 {
@@ -18,8 +19,8 @@ namespace Sitecore.Project.Website.Controllers
 
             //create model instance + set field values
             SubjectDetails sbdetails = new SubjectDetails();
-            sbdetails.Title = contextItem.Fields["Title"].Value;
-            sbdetails.Description = contextItem.Fields["Description"].Value;
+            sbdetails.Title = new HtmlString(FieldRenderer.Render(contextItem,"Title"));
+            sbdetails.Description = new HtmlString(FieldRenderer.Render(contextItem,"Description"));
 
             //pass model instance to view
             return View(sbdetails);

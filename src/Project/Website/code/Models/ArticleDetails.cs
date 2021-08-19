@@ -9,9 +9,9 @@ namespace Sitecore.Project.Website.Models
     //----------------------
     public class ArticleDetails
     {
-        public string ArticleTitle { get; set; }
-        public string ArticleDescription { get; set; }
-        public string ArticlePublishDate { get; set; }
-        public string ArticleImage { get; set; }
+        public HtmlString ArticleTitle { get; set; }
+        public HtmlString ArticleDescription { get; set; }
+        public HtmlString ArticlePublishDate { get; set; }
+        public HtmlString ArticleImage { get; set; }
     }
 }

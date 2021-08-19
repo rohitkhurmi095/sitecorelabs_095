@@ -9,8 +9,8 @@ namespace Sitecore.Project.Website.Models
     //----------------------
     public class AuthorDetails
     {
-        public string AuthorName { get; set; }
-        public string AuthorDesignation { get; set; }
-        public string AuthorImage { get; set; }
+        public HtmlString AuthorName { get; set; }
+        public HtmlString AuthorDesignation { get; set; }
+        public HtmlString AuthorImage { get; set; }
     }
 }

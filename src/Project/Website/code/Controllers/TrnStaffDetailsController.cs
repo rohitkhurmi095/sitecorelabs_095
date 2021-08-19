@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sitecore;
 using Sitecore.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Sitecore.Project.Website.Controllers
 {
@@ -18,12 +19,12 @@ namespace Sitecore.Project.Website.Controllers
 
             //create model instance + set field values
             StaffDetails sfdetails = new StaffDetails();
-            sfdetails.Name = contextItem.Fields["Name"].Value;
-            sfdetails.Profile = contextItem.Fields["Profile"].Value;
-            sfdetails.Experience = contextItem.Fields["Experience"].Value;
-            sfdetails.Specialization = contextItem.Fields["Specialization"].Value;
-            sfdetails.Profile = contextItem.Fields["Profile"].Value;
-            sfdetails.Photo = contextItem.Fields["Photo"].Value;
+            sfdetails.Name = new HtmlString(FieldRenderer.Render(contextItem,"Name"));
+            sfdetails.Profile = new HtmlString(FieldRenderer.Render(contextItem,"Profile"));
+            sfdetails.Experience = new HtmlString(FieldRenderer.Render(contextItem,"Experience"));
+            sfdetails.Specialization = new HtmlString(FieldRenderer.Render(contextItem,"Specialization"));
+            sfdetails.Profile = new HtmlString(FieldRenderer.Render(contextItem,"Profile"));
+            sfdetails.Photo = new HtmlString(FieldRenderer.Render(contextItem,"Photo"));
 
             //return model instance to view
             return View(sfdetails);

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sitecore;
 using Sitecore.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Sitecore.Project.Website.Controllers
 {
@@ -18,12 +19,12 @@ namespace Sitecore.Project.Website.Controllers
 
             //create model instance + set values
             StudentDetails sdetails = new StudentDetails();
-            sdetails.Name = contextItem.Fields["Name"].Value;
-            sdetails.DOB = contextItem.Fields["DOB"].Value;
-            sdetails.Email = contextItem.Fields["Email"].Value;
-            sdetails.PhoneNo = contextItem.Fields["PhoneNo"].Value;
-            sdetails.Profile = contextItem.Fields["Profile"].Value;
-            sdetails.Photograph = contextItem.Fields["Photograph"].Value;
+            sdetails.Name = new HtmlString(FieldRenderer.Render(contextItem,"Name"));
+            sdetails.DOB = new HtmlString(FieldRenderer.Render(contextItem,"DOB"));
+            sdetails.Email = new HtmlString(FieldRenderer.Render(contextItem,"Email"));
+            sdetails.PhoneNo = new HtmlString(FieldRenderer.Render(contextItem,"PhoneNo"));
+            sdetails.Profile = new HtmlString(FieldRenderer.Render(contextItem,"Profile"));
+            sdetails.Photograph = new HtmlString(FieldRenderer.Render(contextItem,"Photograph"));
 
             //return model instance to view
             return View(sdetails);
