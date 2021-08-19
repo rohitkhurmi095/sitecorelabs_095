@@ -272,8 +272,8 @@
     <Reference Include="Sitecore.Mvc, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Mvc.9.3.0\lib\net471\Sitecore.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc.Analytics, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Sitecore.Mvc.Analytics.9.3.0\lib\net471\Sitecore.Mvc.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Mvc.Analytics, Version=11.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Mvc.Analytics.NoReferences.9.0.180604\lib\NET462\Sitecore.Mvc.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Nexus, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Nexus.9.3.0\lib\net471\Sitecore.Nexus.dll</HintPath>
@@ -456,9 +456,24 @@
     <Content Include="Views\StudentDetailsLayout.cshtml" />
     <Content Include="Views\StaffDetailsLayout.cshtml" />
     <Content Include="Views\SubjectDetailsLayout.cshtml" />
+    <Content Include="Views\TrnArticleDetails\Index.cshtml" />
+    <Content Include="Views\TrnStudentDetails\Index.cshtml" />
+    <Content Include="Views\TrnStaffDetails\Index.cshtml" />
+    <Content Include="Views\TrnSubjectDetails\Index.cshtml" />
+    <Content Include="Views\TrnAuthorDetails\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\TrnArticleDetailsController.cs" />
+    <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
+    <Compile Include="Controllers\TrnStaffDetailsController.cs" />
+    <Compile Include="Controllers\TrnStudentDetailsController.cs" />
+    <Compile Include="Controllers\TrnSubjectDetailsController.cs" />
+    <Compile Include="Models\ArticleDetails.cs" />
+    <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\StaffDetails.cs" />
+    <Compile Include="Models\StudentDetails.cs" />
+    <Compile Include="Models\SubjectDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -471,10 +486,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

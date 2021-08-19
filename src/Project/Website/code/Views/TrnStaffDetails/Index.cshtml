@@ -1,0 +1,33 @@
+﻿@model Sitecore.Project.Website.Models.StaffDetails
+
+<div style="margin-top:50px;margin-left:50px">
+    <table border="1" style="border-left:none;border-right:none;border-top:none;border-bottom:none;padding:10px">
+        <tr>
+            <td colspan="2">
+                @Model.Photo
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Name: </h3></td>
+            <td> <h3>@Model.Name</h3></td>
+        </tr>
+        <tr>
+            <td><h3>Profile: </h3></td>
+            <td>
+                <P> @Model.Profile</P>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Experience: </h3></td>
+            <td>
+                <P>@Model.Experience</P>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Specialization: </h3></td>
+            <td>
+                <P>@Model.Specialization</P>
+            </td>
+        </tr>
+    </table>
+</div>
