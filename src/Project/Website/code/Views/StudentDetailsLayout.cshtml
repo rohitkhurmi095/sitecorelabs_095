@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Details</title>
+</head>
+<body>
+    <div>
+        <div>
+            @Html.Sitecore().Field("Photograph")
+        </div>
+        <div>
+            <h2>Name: @Html.Sitecore().Field("Name")</h2>
+        </div>
+        <div>
+            <h3>DOB: @Html.Sitecore().Field("DOB")</h3>
+        </div>
+        <div>
+            <h3>Email: @Html.Sitecore().Field("Email")</h3>
+        </div>
+        <div>
+            <h3>PhoneNo: @Html.Sitecore().Field("PhoneNo")</h3>
+        </div>
+        <div>
+            <p>@Html.Sitecore().Field("Profile")</p>
+        </div>
+    </div>
+</body>
+</html>

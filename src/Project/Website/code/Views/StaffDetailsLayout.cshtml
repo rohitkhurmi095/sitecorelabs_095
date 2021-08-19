@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Staff Details</title>
+</head>
+<body>
+    <div style="margin-top:50px;margin-left:50px">
+        <table border="1" style="border-left:none;border-right:none;border-top:none;border-bottom:none;padding:10px">
+            <tr>
+                <td colspan="2">
+                    @Html.Sitecore().Field("Photo")
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Name: </h3></td>
+                <td> <h3>@Html.Sitecore().Field("Name")</h3></td>
+            </tr>
+            <tr>
+                <td><h3>Profile: </h3></td>
+                <td>
+                    <P> @Html.Sitecore().Field("Profile")</P>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Experience: </h3></td>
+                <td>
+                    <P>@Html.Sitecore().Field("Experience")</P>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Specialization: </h3></td>
+                <td>
+                    <P>@Html.Sitecore().Field("Specialization")</P>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

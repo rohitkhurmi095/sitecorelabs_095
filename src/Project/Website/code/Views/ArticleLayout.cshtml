@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Article Layout</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1> @Html.Sitecore().Field("ArticleTitle") </h1>
+        </div>
+        <div>
+            <h5>@Html.Sitecore().Field("ArticlePublishDate")</h5>
+        </div><br />
+        <div>
+            @Html.Sitecore().Field("ArticleImage")
+        </div>
+        <div>
+            @Html.Sitecore().Field("ArticleDescription")
+        </div> <br />
+        <div>
+            <h2>@Html.Sitecore().Field("AuthorName")</h2>
+        </div>
+        <div>
+            <h5>@Html.Sitecore().Field("AuthorDesignation")</h5>
+        </div>
+        <div>
+            @Html.Sitecore().Field("AuthorImage")
+        </div>
+    </div>
+</body>
+</html>

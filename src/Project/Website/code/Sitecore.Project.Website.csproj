@@ -448,6 +448,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\BaseLayout.cshtml" />
+    <Content Include="App_Config\Include\Project\Website\sitecore.SiteDefinition.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ArticleLayout.cshtml" />
+    <Content Include="Views\StudentDetailsLayout.cshtml" />
+    <Content Include="Views\StaffDetailsLayout.cshtml" />
+    <Content Include="Views\SubjectDetailsLayout.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
