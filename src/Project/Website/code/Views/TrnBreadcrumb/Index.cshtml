@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Sitecore.Project.Website.Models.BreadcrumbItem>
+
+<!-- LIST OF NAVIGATION/BREADCRUMB ITEMS -->
+<!-- IEnumerable<>: readonly list-->
+<!-- List inherits from IEnumerable interface-->
+<!-- USE List<>/IEnumerable<> for List Type-->
+<!--foreach loop for to iterate through items-->
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        @foreach (var navItem in Model)
+        {
+            <li class="breadcrumb-item">
+                <a href="@navItem.ItemUrl">@navItem.ItemName</a>
+            </li>
+        }
+    </ol>
+</nav>
