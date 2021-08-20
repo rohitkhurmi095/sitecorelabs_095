@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Sitecore.Project.Website.Models.DeptListingCard>
+
+<div>
+    @foreach (var entityItem in Model)
+    {
+        <a href="@entityItem.EntityUrl">
+            <div>@entityItem.EntityName</div>
+        </a>
+
+        <div>@entityItem.EntityBrief</div>
+    }<br/><br/>
+</div>

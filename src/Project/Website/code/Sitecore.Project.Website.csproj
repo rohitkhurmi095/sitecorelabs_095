@@ -463,6 +463,7 @@
     <Content Include="Views\TrnAuthorDetails\Index.cshtml" />
     <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
     <Content Include="Views\TrnArticlesListing\Index.cshtml" />
+    <Content Include="Views\TrnListingCard\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -470,6 +471,7 @@
     <Compile Include="Controllers\TrnArticlesListingController.cs" />
     <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
+    <Compile Include="Controllers\TrnListingCardController.cs" />
     <Compile Include="Controllers\TrnStaffDetailsController.cs" />
     <Compile Include="Controllers\TrnStudentDetailsController.cs" />
     <Compile Include="Controllers\TrnSubjectDetailsController.cs" />
@@ -477,6 +479,7 @@
     <Compile Include="Models\ArticleListing.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
     <Compile Include="Models\BreadcrumbItem.cs" />
+    <Compile Include="Models\DeptListingCard.cs" />
     <Compile Include="Models\StaffDetails.cs" />
     <Compile Include="Models\StudentDetails.cs" />
     <Compile Include="Models\SubjectDetails.cs" />
