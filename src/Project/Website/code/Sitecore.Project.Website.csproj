@@ -462,16 +462,19 @@
     <Content Include="Views\TrnSubjectDetails\Index.cshtml" />
     <Content Include="Views\TrnAuthorDetails\Index.cshtml" />
     <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
+    <Content Include="Views\TrnArticlesListing\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\TrnArticleDetailsController.cs" />
+    <Compile Include="Controllers\TrnArticlesListingController.cs" />
     <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
     <Compile Include="Controllers\TrnStaffDetailsController.cs" />
     <Compile Include="Controllers\TrnStudentDetailsController.cs" />
     <Compile Include="Controllers\TrnSubjectDetailsController.cs" />
     <Compile Include="Models\ArticleDetails.cs" />
+    <Compile Include="Models\ArticleListing.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
     <Compile Include="Models\BreadcrumbItem.cs" />
     <Compile Include="Models\StaffDetails.cs" />

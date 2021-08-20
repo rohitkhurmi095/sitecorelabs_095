@@ -11,7 +11,7 @@ using Sitecore.Data.Items;
 namespace Sitecore.Project.Website.Controllers
 {
     public class TrnBreadcrumbController : Controller
-    {  
+    {
 
         //LINQ Statement (Language Integrated Query)
         //LINQ - Reduces the line of code in C#
@@ -38,6 +38,12 @@ namespace Sitecore.Project.Website.Controllers
              })
         - convert to List[] => ToList()*/
 
+        //NOTE:
+        /*Template-> articleTemplate(TrnArticle)
+              -> Inheritance(this template is inherited from standardTemplate_
+                    -> Inherated from other templates(Appeararnce)
+                       so, we get name of field - __Display name(to be used in code)*/
+
 
         // GET: TrnBreadcrumb
         public ActionResult Index() 
@@ -54,7 +60,7 @@ namespace Sitecore.Project.Website.Controllers
                                              .Where(x=> x.Axes.IsDescendantOf(startItem))
                                              .Concat(new Item[] {contextItem})
                                              .Select(x => new BreadcrumbItem {
-                                                 ItemName = x.Name,
+                                                 ItemName = x.Fields["__Display name"].Value == "" ? x.Name: x.Fields["__Display name"].Value,
                                                  ItemUrl = LinkManager.GetDynamicUrl(x)
                                              }).ToList();
             
