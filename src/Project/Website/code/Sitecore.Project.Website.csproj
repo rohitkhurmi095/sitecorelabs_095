@@ -464,6 +464,8 @@
     <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
     <Content Include="Views\TrnArticlesListing\Index.cshtml" />
     <Content Include="Views\TrnListingCard\Index.cshtml" />
+    <Content Include="Views\TrnHallOfFame\Index.cshtml" />
+    <Content Include="Views\DepartmentPageLayout.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -471,6 +473,7 @@
     <Compile Include="Controllers\TrnArticlesListingController.cs" />
     <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
+    <Compile Include="Controllers\TrnHallOfFameController.cs" />
     <Compile Include="Controllers\TrnListingCardController.cs" />
     <Compile Include="Controllers\TrnStaffDetailsController.cs" />
     <Compile Include="Controllers\TrnStudentDetailsController.cs" />
