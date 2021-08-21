@@ -5,16 +5,16 @@
 <!--=========================-->
 <!-- IEnumerable: read only list-->
 <!-- List of Comments -->
-<br/><br/>
-<div>
+<br/>
+<div style="margin-left:10px;color:gray;">
+    <h6>Comments:</h6>
     @foreach (var commentItem in Model)
     {
         <div>
-             @commentItem.CommenterName<br />
-             @commentItem.CommenterEmail<br />
-            <p>
-                @commentItem.CommenterComments
-            </p>
+            <div>@commentItem.CommenterName (@commentItem.CommenterEmail)</div>
+            <div>@commentItem.CommenterComments</div>
         </div>
+        <br />
     }
 </div>
+<br/>

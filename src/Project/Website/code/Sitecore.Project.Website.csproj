@@ -467,6 +467,8 @@
     <Content Include="Views\TrnHallOfFame\Index.cshtml" />
     <Content Include="Views\DepartmentPageLayout.cshtml" />
     <Content Include="Views\TrnComments\Index.cshtml" />
+    <Content Include="Views\TrnCommentsForm\Index.cshtml" />
+    <Content Include="Views\TrnCommentsForm\Summary.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -475,6 +477,7 @@
     <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
     <Compile Include="Controllers\TrnCommentsController.cs" />
+    <Compile Include="Controllers\TrnCommentsFormController.cs" />
     <Compile Include="Controllers\TrnHallOfFameController.cs" />
     <Compile Include="Controllers\TrnListingCardController.cs" />
     <Compile Include="Controllers\TrnStaffDetailsController.cs" />

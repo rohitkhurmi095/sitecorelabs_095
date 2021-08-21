@@ -1,0 +1,29 @@
+﻿@model Sitecore.Project.Website.Models.Comment
+
+<!--===============-->
+<!-- Comment's Form-->
+<!--===============-->
+<!-- using same comment Model-->
+
+<div style="margin-left:10px">
+    <h5>Comments Form</h5>
+    @using (Html.BeginForm())
+    {
+        <!-- Name -->
+        <div>Name:</div>
+        <div>@Html.TextBoxFor(x => x.CommenterName, new { placeholder = "Enter your name here..", @class = "@form-input" })</div>
+
+        <!-- Email -->
+        <div>Email Id:</div>
+        <div>@Html.TextBoxFor(x => x.CommenterEmail, new { placeholder = "Enter your email id here..", @class = "form-input" })</div>
+
+        <!-- Comment -->
+        <div>Comments: </div>
+        <div>@Html.TextBoxFor(x => x.CommenterComments, new { placeholder = "Enter yout comment here..", @class = "form-input" })</div>
+
+        <!-- Submit Button -->
+        <div><input type="submit" value="Submit yout Comment" /></div>
+    }
+</div>
+<br /><br />
+
