@@ -1,0 +1,18 @@
+﻿@model List<Sitecore.Project.Website.Models.AuthorInfo>
+
+<!-- List of Items-->
+<!-- Authors-->
+<br />
+<!-- List of Items-->
+<div>
+    <h6 style="color:silver">Co-Authors:</h6>
+    @foreach (var listItem in Model)
+    {
+        {
+            <div>
+                @listItem.AuthorInformation
+            </div>
+        }
+    }
+</div>
+<br/>

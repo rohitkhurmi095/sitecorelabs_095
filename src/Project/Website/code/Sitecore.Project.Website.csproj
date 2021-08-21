@@ -470,12 +470,14 @@
     <Content Include="Views\TrnCommentsForm\Index.cshtml" />
     <Content Include="Views\TrnCommentsForm\Summary.cshtml" />
     <Content Include="Views\TrnSearch\Index.cshtml" />
+    <Content Include="Views\TrnAuthorInfo\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\TrnArticleDetailsController.cs" />
     <Compile Include="Controllers\TrnArticlesListingController.cs" />
     <Compile Include="Controllers\TrnAuthorDetailsController.cs" />
+    <Compile Include="Controllers\TrnAuthorInfoController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
     <Compile Include="Controllers\TrnCommentsController.cs" />
     <Compile Include="Controllers\TrnCommentsFormController.cs" />
@@ -488,6 +490,7 @@
     <Compile Include="Models\ArticleDetails.cs" />
     <Compile Include="Models\ArticleListing.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\AuthorInfo.cs" />
     <Compile Include="Models\BreadcrumbItem.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DeptListingCard.cs" />
