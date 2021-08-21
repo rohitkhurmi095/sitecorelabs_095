@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Sitecore.Project.Website.Models.Comment>
+
+<!--=========================-->
+<!-- Display Comments Section-->
+<!--=========================-->
+<!-- IEnumerable: read only list-->
+<!-- List of Comments -->
+<br/><br/>
+<div>
+    @foreach (var commentItem in Model)
+    {
+        <div>
+             @commentItem.CommenterName<br />
+             @commentItem.CommenterEmail<br />
+            <p>
+                @commentItem.CommenterComments
+            </p>
+        </div>
+    }
+</div>
