@@ -1,0 +1,49 @@
+﻿@model Sitecore.Project.Website.Models.SearchViewModel
+
+<!-- WE NEED SEARCH RESULT MODEL also here -->
+<!-- We cannot import 2 models here in a single view -->
+<!-- Create new model - SearchViewModel = SearchTerm + SerchResult -->
+
+<!--============-->
+<!--SEARCH FORM -->
+<!---------------->
+<!-- [HttpGet] -->
+<div style="margin-left:10px;margin-top:10px">
+    @using (Html.BeginForm())
+    {
+        <!-- SearchTerm_BOX-->
+        <!-- SearchText = SearchViewModel.Term.SearchText-->
+        <div>@Html.TextBoxFor(x => x.Term.SearchText, new { placeholder = "Search here..", @class = "form-input" })</div>
+
+        <!-- Submit_Button -->
+        <div><input type="submit" value="Search" /></div>
+        <br />
+    }
+</div>
+
+
+
+<!--==============-->
+<!-- SEARCH RESULT-->
+<!--==============-->
+<!-- [HttpPost] -->
+<!-- SearchViewMode.Result.SearchResultTitle-->
+<!-- SearchViewMode.Result.SearchResultDescription-->
+<div style="margin-left:10px">
+    @if (Model != null)
+    {
+        foreach (var resultItem in Model.Result)
+        {
+            <div>
+                <div>@resultItem.SearchResultTitle</div>
+                <div>@resultItem.SearchResultDescription</div>
+            </div>
+            <br />
+        }
+    }
+</div>
+
+
+
+
+

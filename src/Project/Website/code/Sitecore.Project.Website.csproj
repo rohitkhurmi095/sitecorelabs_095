@@ -469,6 +469,7 @@
     <Content Include="Views\TrnComments\Index.cshtml" />
     <Content Include="Views\TrnCommentsForm\Index.cshtml" />
     <Content Include="Views\TrnCommentsForm\Summary.cshtml" />
+    <Content Include="Views\TrnSearch\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -480,6 +481,7 @@
     <Compile Include="Controllers\TrnCommentsFormController.cs" />
     <Compile Include="Controllers\TrnHallOfFameController.cs" />
     <Compile Include="Controllers\TrnListingCardController.cs" />
+    <Compile Include="Controllers\TrnSearchController.cs" />
     <Compile Include="Controllers\TrnStaffDetailsController.cs" />
     <Compile Include="Controllers\TrnStudentDetailsController.cs" />
     <Compile Include="Controllers\TrnSubjectDetailsController.cs" />
@@ -489,6 +491,9 @@
     <Compile Include="Models\BreadcrumbItem.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DeptListingCard.cs" />
+    <Compile Include="Models\SearchResult.cs" />
+    <Compile Include="Models\SearchTerm.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\StaffDetails.cs" />
     <Compile Include="Models\StudentDetails.cs" />
     <Compile Include="Models\SubjectDetails.cs" />
